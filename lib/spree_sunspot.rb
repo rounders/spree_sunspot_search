@@ -1,2 +1,2 @@
 require 'spree_core'
-require 'spree/sunspot/engine'
+require 'spree_sunspot/engine'

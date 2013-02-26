@@ -2,7 +2,7 @@ if not defined?(SunspotRails::Generators::InstallGenerator)
   require 'generators/sunspot_rails/install/install_generator.rb'
 end
 
-module Spree::Sunspot
+module SpreeSunspot
   module Generators
     class InstallGenerator < Rails::Generators::Base
       def self.source_root
