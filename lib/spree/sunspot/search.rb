@@ -33,7 +33,8 @@ module Spree
 
         curr_page = page || 1
 
-        @products = @products_scope.includes([:master]).page(curr_page).per(per_page)
+        @products = @products_scope.includes([:master])
+        Kaminari.paginate_array(@products, total_count: @solr_search.total).page(curr_page).per(per_page)
       end
 
       def similar_products(product, *field_names)
